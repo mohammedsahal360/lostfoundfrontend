@@ -1,3 +1,20 @@
+fetch('https://your-backend-service.onrender.com/api/endpoint')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
+fetch('https://your-backend-service.onrender.com/api/endpoint', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ key: 'value' }),
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
+
 function listopen() {
     const dropdownMenu = document.getElementById('dropdownMenu');
     const dropbtn = document.getElementById('dropdown-toggle');
